@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url("IBMPlexSans-Regular.ttf") format("truetype")
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #f00;
+}
+
+.container {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #000;
+    line-height: normal;
+    margin: 150px auto;
+}
+
+.top {
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+.leading {
+    font-size: 1.7rem;
+    /* padding-top: 2px; */
+}
+
+.box {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
