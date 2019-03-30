@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Báisteach</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <script src="d3/d3.min.js" type="text/javascript"></script>
+  <script src="rainy.js" type="text/javascript"></script>
+</head>
+
+<body onload="createViz()">
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="page-header">
+          <h1>Múiríní gréine</h1>
+
+          <h4>An bháisteach sa gcúltúr</h4>
+
+          <p class="text-muted byline">Eoin Ó Loideáin |
+            <a href="//eol.as">eol.as</a> | Mar 23, 2019</p>
+        </div>
+
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <p class="has-pullquote"
+          data-pullquote="Báisteach ó Dhia chugainn is gan é a bheith fliuch, is cuid an lae amáirigh go ndéana sé anocht">
+          <span class="firstcharacter">D</span>é réir
+          <i>Lebor Gabála Érenn</i> thosaigh an bháisteach 40 lá tar éis do Cessair agus a lucht leanúna theacht i dtír.
+          B'iad
+          seo an chéad dream ariamh a tháinig go hÉireann agus chreid siad go raibh siad sách fada siar ar imeall an
+          domhan
+          go n-éalódh siad ón An Díle bíobalta a bhí geallta. Ach ní raibh an t-ádh leo agus nuair a "phléasc toibreacha
+          uile an duibheagáin mhóir, agus osclaíodh comhlaí uisce neimhe", níor tháinig ach aon duine amháin acu slán.
+          B'shin
+          é Fintán Mac Bochrá, a raibh bua ilchruthach aige agus bhí sé in ann bradán a dhéanamh dhó fhéin. Ag tosaigh
+          le
+          scéal Cessair go dtí an Béal Bocht tá an bháisteach súite isteach ag cultúr agus teanga na hÉireann. </p>
+      </div>
+      <div class="col-sm-2">
+        <nota>
+        </nota>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <p>Léiríonn an leabhar
+          <i>"An Béal Beo"</i> an éagsúlacht an bhaineann le báisteach. Tosaíonn sé le ceo , agus sé an ró-samh an ceo a
+          thagann
+          isteach ón fharraige an ceo is éadtroime. Is troime an ceobhrán agus is troime aríst an brádán agus is troime
+          fós an sriabhán. Nuair a thosaíonn an sriabhán ag neartú, bíonn sé ag imeacht ina riasgacha. Is féidir leis a
+          bheith
+          ag cur sceana gréasaí, sceana dearga nó sceana beaga. Deireann daoine
+          <i>"fearthainn"</i>, deireann daoine eile
+          <i>"cith"</i> agus i gConamara bíonn
+          <i>"múr"</i>. Múirín gréine a tugtar ar mhúr éadtroim báistí a thagann leis an griáin. Craoi-mhúr a thugtar ar
+          mhúr
+          a curfeadh sé in áit nuair a bheadh sé tirim in áiteannaí eile garr dhó, barr-chith a tugtar ar an bháisteach
+          céanna
+          má tharlaíonn sé sna chnoic.</p>
+      </div>
+      <div class="col-sm-2">
+        <nota>
+        </nota>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <p>Cuireann an bháisteach le saibhreas ár sean-fhocla chomh maith. Is minic a ghuítear:
+          <i>"Báisteach ó Dhia chugainn is gan é a bheith fliuch, is cuid an lae amáirigh go ndéana sé anocht"</i>. Ach
+          trathúil
+          go maith, ag an ám céanna tá sé ráite
+          <i>"Na trí huaire is baolaí báisteach, Tús Aoine nó deireadh Sathairn, Nó maidin Domhnaigh ar uair an chéad
+            Aifreann"</i>.
+          Cé gur deas é mar leagán cainte, nuair a dhéantar staidéar ar shonraí báistí Met Éireann d'aerfort Bleá Cliath
+          thar thréimhse 30 bliáin tá sé soiléir nach bhfuil an pictúir chomh símplí sin... </p>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <!-- <h3>30 bliáin Sonraí Báistí, Aerfort Baile Áth Cliath</h3> -->
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+
+    <div class="row">
+      <div id="header"></div>
+      <div id="chart">
+        <div id="tooltip" class="tooltip"></div>
+      </div>
+      <div id="nav" class="nav"></div>
+    </div>
+
+    <div class="row info">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <p class="text-right">Sonraí le
+          <a href="//met.ie">met.ie</a> | léaráid le
+          <a href="//eol.as">eol.as</a> | ionsparáid ó
+          <a href="//multimedia.scmp.com/rainfall/">South China Morning News</a> via
+          <a href="//www.thefunctionalart.com/2014/04/south-china-morning-posts-rainfall-in.html">Alberto Cairo</a>
+        </p>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+</body>
+
+</html>
+
+<!--
+<p><figure class="l left"><img src="rain.jpeg" alt="mossy log with ferns growing out of it" width="300">
+        <figcaption>Floating Left</figcaption>
+      </figure></p>
+
+<figure class="r right"><img src="Raindrops.jpg" alt="mossy log with ferns growing out of it" width="300">
+      <figcaption>Floating Right</figcaption>
+    </figure>
+
+
+      -->
